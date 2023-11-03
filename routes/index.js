@@ -6,11 +6,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('year', function(req, res, next){
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
-  
-  res.json({ year: currentYear.toString() });
+router.get('/year', function(req, res, next){
+  const date = new Date();
+  const year = date.getFullYear();
+
+  res.json({ year: year.toString() });
 });
 
 module.exports = router;
